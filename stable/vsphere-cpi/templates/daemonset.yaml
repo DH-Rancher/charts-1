@@ -53,7 +53,7 @@ spec:
         effect: NoSchedule
         operator: Exists
       {{- if .Values.daemonset.tolerations }}
-      {{- toYaml .Values.daemonset.tolerations | indent 8 }}
+      {{ toYaml .Values.daemonset.tolerations | indent 8 }}
       {{- end }}
       {{- if .Values.securityContext.enabled }}
       securityContext:
